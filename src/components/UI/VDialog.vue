@@ -38,9 +38,10 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
 
+  box-sizing: border-box;
   width: 510px;
   max-width: 100%;
-  height: 585px;
+  max-height: 585px;
   max-height: 100%;
 
   padding: 36px 40px;

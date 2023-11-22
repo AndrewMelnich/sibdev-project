@@ -28,14 +28,14 @@
             <p>По ваше му запросу ничего не найдено</p>
           </template>
         </div>
-        <templat v-if="response.total">
+        <template v-if="response.total">
           <search-result
             v-if="response.videos.length > 0"
             :videos="response.videos"
             :total="response.total"
             :request="response.query"
           />
-        </templat>
+        </template>
       </div>
     </div>
     <edit-faforite-dialog
@@ -156,7 +156,6 @@ export default {
         const findQuery = user.favouriteList.find(
           (favourite) => favourite.id === queryId
         );
-
 
         this.queryParams = {
           query: findQuery.query,

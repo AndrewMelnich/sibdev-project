@@ -1,6 +1,6 @@
 <template>
   <VDialog v-model:visible="localVisible">
-    <template #title>{{ title }} запрос</template>
+    <template #title>{{ title }}</template>
     <template #content>
       <div class="edit-favourite-dialog">
         <div class="edit-favourite-dialog__window">
@@ -58,6 +58,8 @@
                 </div>
                 <div class="slider__block-input">
                   <input
+                    min="0"
+                    max="50"
                     type="number"
                     class="slider__block-input__number"
                     v-model="savedRequest.maxSizeItems"
@@ -252,6 +254,7 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 
 .slider__block-select {
@@ -263,12 +266,44 @@ export default {
 }
 
 .slider__block-input {
-  // width: 100px;
-  // height: 48px;
   padding: 12px 15px;
   border-radius: 10px;
   border: 1px solid rgba(23, 23, 25, 0.2);
+  width: 100px;
+  box-sizing: border-box;
+
+  & input {
+    outline: 0;
+    border: none;
+    appearance: none;
+    width: 100%;
+    color: #272727;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    padding: 0;
+  }
 }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+// .slider__block-input input {
+//   outline: 0;
+//   border: none;
+//   appearance: none;
+//   width: 100%;
+// }
 
 .edit-favourite-dialog__buttons {
   display: flex;

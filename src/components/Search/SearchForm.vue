@@ -14,9 +14,17 @@
           ]"
         >
           <template #append>
-            <button v-if="localQuery" type="button" @click="resetValue">
-              X
-            </button>
+            <div class="search-form__input-clear">
+              <button
+                v-if="localQuery"
+                type="button"
+                @click="resetValue"
+                class="btn btn--clear"
+              >
+                <v-clear />
+              </button>
+            </div>
+
             <VDropdown
               v-if="isShowSaveFafouriteButton"
               class="wrapper__input-dropdown"
@@ -67,6 +75,7 @@
 import { DEFAULT_SORT_REQUEST_OPTION } from "@/constants/options";
 import HeartIcon from "@/components/UI/icons/HeartIcon.vue";
 import VInput from "@/components/UI/VInput.vue";
+import VClear from "../UI/icons/VClear.vue";
 
 const DEFAULT_MAX_SIZE_ITEMS = 12;
 
@@ -93,6 +102,7 @@ export default {
   components: {
     HeartIcon,
     VInput,
+    VClear,
   },
   data() {
     return {
@@ -207,5 +217,17 @@ export default {
     width: 90px;
     font-size: 16px;
   }
+}
+
+.search-form__input-clear {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.btn--clear {
+  width: 100%;
+  height: 100%;
+  padding: 0;
 }
 </style>
