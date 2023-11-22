@@ -1,7 +1,3 @@
-// @function rem($px) {
-//   @return $px / $baseFontsSize + 0rem;
-// }
-
 @mixin notebooks{
   @media screen and (max-width: $notebooks) {
     @content;

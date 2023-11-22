@@ -24,15 +24,9 @@ function setDefaultUsers() {
 
 setDefaultUsers()
 
-// function removeInLocalStorage(name){
-//   localStorage.removeItem(name);
-// }
-
-
 export const useAuthStore = defineStore({
   id: 'auth',
   state: () => ({
-    // isAuthenticated: false,
     user: { },
     tokens: JSON.parse(localStorage.getItem('currentUser'))?.tokens || {
       access: null,
@@ -57,8 +51,6 @@ export const useAuthStore = defineStore({
       })
     },
     logout() {
-      // eslint-disable-next-line no-debugger
-      // debugger
       this.tokens = {
         access: null,
         refresh: null

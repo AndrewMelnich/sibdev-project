@@ -1,8 +1,5 @@
 import axios from 'axios';
 
-// import axios from 'axios';
-// import { API_KEY } from './youtube';
-
 const timeout = 600000;
 /** @type {import('axios').AxiosInstance} */
 const axiosInstance = axios.create({ baseURL: '/', timeout });

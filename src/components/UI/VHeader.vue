@@ -63,7 +63,6 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
-  // padding: 16px 0;
   height: 80px;
   background-color: #f1f1f1;
 }

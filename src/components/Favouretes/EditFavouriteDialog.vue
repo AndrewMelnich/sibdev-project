@@ -157,8 +157,6 @@ export default {
 
   methods: {
     resetLocalState(newModel) {
-      // eslint-disable-next-line no-debugger
-      // debugger;
       const emptyFavourite = {
         name: "",
         query: "",
@@ -297,13 +295,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
-
-// .slider__block-input input {
-//   outline: 0;
-//   border: none;
-//   appearance: none;
-//   width: 100%;
-// }
 
 .edit-favourite-dialog__buttons {
   display: flex;

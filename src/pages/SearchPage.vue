@@ -199,7 +199,6 @@ export default {
   position: relative;
 
   align-items: center;
-  // height: 52px;
   border: none;
   outline: none;
   width: 100%;
