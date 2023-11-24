@@ -12,10 +12,10 @@
       </div>
       <div class="search__result-block__col" @click="changeVisualResult">
         <button class="btn btn--result">
-          <rows-icon :class="['v-icon', isRows && 'v-icon--fill']" />
+          <rows-icon :class="['v-icon', !isRows && 'v-icon--fill']" />
         </button>
         <button class="btn btn--result">
-          <colum-icon :class="['v-icon', !isRows && 'v-icon--fill']" />
+          <colum-icon :class="['v-icon', isRows && 'v-icon--fill']" />
         </button>
       </div>
     </div>
@@ -68,7 +68,7 @@ export default {
   },
   data() {
     return {
-      isRows: false, // строчный вариант просмотра рузультата
+      isRows: true, // строчный вариант просмотра рузультата
     };
   },
   methods: {
@@ -85,6 +85,7 @@ export default {
 
 .search__result {
   width: 100%;
+  padding-bottom: 40px;
 }
 
 .search__result-block {
